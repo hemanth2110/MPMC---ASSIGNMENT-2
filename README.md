@@ -7,6 +7,7 @@ To write an assembly language program in 8051 microcontroller to generate a 5 ms
 
 Algorithm:
 1.Initialize Port 1 for LED output.
+
 2.Set Timer 1 in Mode 1 (16-bit) using TMOD register.
 3.Load TH1 = 0xEC and TL1 = 0x78.
 4.Start Timer 1 using SETB TR1.
