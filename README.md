@@ -1,22 +1,19 @@
 EXPERIMENT: Timer-based LED Toggle using 8051
 
-Write an assembly language program in 8051 to generate a 5 ms delay using Timer 1 in Mode 1 and toggle an LED connected to Port 1.7 continuously.
+Write an assembly language program in 8051 to generate a 5 ms delay using Timer 1 in Mode 1 and toggle an LED connected to Port 1.7 continuously
 
-AIM:
+Aim:
 To write an assembly language program in 8051 microcontroller to generate a 5 ms delay using Timer 1 in Mode 1 and continuously toggle an LED connected to Port 1.7
 
-ALGORITHM:
-
-Start the program at address 0000H.
-Select Timer 1, Mode 1 (16-bit Timer) by loading TMOD with 10H.
-Load Timer 1 registers with initial values for a 5 ms delay.
-For 12 MHz crystal, machine cycle = 1 µs
-Required count = 65536 − 5000 = EC78H
-→ TH1 = ECH, TL1 = 78H
-Start the timer using SETB TR1.
-Wait until TF1 = 1 (timer overflow → 5 ms delay complete).
-Stop the timer and clear TF1 for next delay cycle.
-Toggle P1.7 using CPL P1.7.
+Algorithm:
+Initialize Port 1 for LED output.
+Set Timer 1 in Mode 1 (16-bit) using TMOD register.
+Load TH1 = 0xEC and TL1 = 0x78.
+Start Timer 1 using SETB TR1.
+Wait until overflow flag (TF1) is set.
+Stop timer, clear flag, and return.
+After delay, toggle the LED on P1.7 using CPL P1.7.
+Repeat the process continuously.
 
 PROGRAM:
 ```
