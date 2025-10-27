@@ -52,7 +52,7 @@ END
 
 OUTPUT:
 <img width="1919" height="1021" alt="Screenshot 2025-10-27 182450" src="https://github.com/user-attachments/assets/7b1ba353-c2c6-46e2-9649-04adbb00805a" />
-
+<img width="1919" height="1019" alt="Screenshot 2025-10-27 182410" src="https://github.com/user-attachments/assets/d80ed266-40f4-4600-a351-7953cae91a7b" />
 
 RESULT:
 Thus, the assembly language program for generating a 5 ms delay using Timer 1 in Mode 1 and toggling an LED connected to Port 1.7 was successfully executed and verified in Keil µVision.
