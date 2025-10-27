@@ -6,14 +6,21 @@ Aim:
 To write an assembly language program in 8051 microcontroller to generate a 5 ms delay using Timer 1 in Mode 1 and continuously toggle an LED connected to Port 1.7
 
 Algorithm:
+
 1.Initialize Port 1 for LED output.
 
 2.Set Timer 1 in Mode 1 (16-bit) using TMOD register.
+
 3.Load TH1 = 0xEC and TL1 = 0x78.
+
 4.Start Timer 1 using SETB TR1.
+
 5.Wait until overflow flag (TF1) is set.
+
 6.Stop timer, clear flag, and return.
+
 7.After delay, toggle the LED on P1.7 using CPL P1.7.
+
 8.Repeat the process continuously.
 
 PROGRAM:
