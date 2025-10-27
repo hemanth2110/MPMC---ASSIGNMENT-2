@@ -1,3 +1,5 @@
+EXPERIMENT: Timer-based LED Toggle using 8051
+
 Write an assembly language program in 8051 to generate a 5 ms delay using Timer 1 in Mode 1 and toggle an LED connected to Port 1.7 continuously.
 
 
@@ -48,19 +50,9 @@ END
 
 ```
 
-CALCULATION:
-For 12 MHz crystal:
-1 machine cycle = 1 µs
-For 5 ms delay → 5000 µs
-Timer count needed = 65536 − 5000 = 60536 = EC78H
-Hence:
-TH1 = ECH
-TL1 = 78H
-
 OUTPUT:
-In Keil µVision simulation, the bit P1.7 toggles continuously every 5 ms, confirming the correct timer operation.
+<img width="1919" height="1021" alt="Screenshot 2025-10-27 182450" src="https://github.com/user-attachments/assets/7b1ba353-c2c6-46e2-9649-04adbb00805a" />
+
 
 RESULT:
 Thus, the assembly language program for generating a 5 ms delay using Timer 1 in Mode 1 and toggling an LED connected to Port 1.7 was successfully executed and verified in Keil µVision.
-
-Would you like me to also include the timing waveform diagram (showing the toggle pattern of P1.7 vs time) — it looks great when added to your lab report or viva presentation?
